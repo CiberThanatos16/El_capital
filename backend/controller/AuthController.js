@@ -4,7 +4,7 @@ const pool = require("../database/db");
 const { OAuth2Client } = require("google-auth-library");
 const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
-const JWT_SECRET = process.env.JWT_SECRET; 
+const JWT_SECRET = process.env.JWT_SECRET;
 
 exports.register = async (req, res) => {
     const { nombre, email, password } = req.body;
